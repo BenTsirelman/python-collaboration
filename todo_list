@@ -1,0 +1,29 @@
+'''Ben Tsirelman
+2/7/2025
+To Do List'''
+
+def TODOLIST(todo):
+    action = input("What would you like to do")
+    if action == "view":
+        print(todo)
+    if action == "delete":
+        print(todo)
+        which = int(input("which item would you like to delete?"))
+        todo = todo[0:which-1] + todo[which:]
+    if action == "add":
+        addition = input("What would you like to add")
+        todo.append(addition)
+    if action == "mark completed":
+        which2 = int(input("Which task would you like to mark as completed"))
+        todo[which2-1] = str(todo[which2-1]) + " is completed"
+    view = input("what you like to view your list")
+    if view == "yes":
+        print(todo)
+
+        
+def main():
+    todo = ["buy apples", "sleep", "use the bathroom"]
+    TODOLIST(todo)
+
+main()
+
